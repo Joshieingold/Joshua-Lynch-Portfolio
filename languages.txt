@@ -7,6 +7,10 @@ public void C#()
 
 }
 
+public void C++() {
+
+}
+
 function Javascript() {
     Javascript is a neccesity in the modern programming landscape.
     I have used it sparingly in my projects. however I am competent with best
@@ -37,4 +41,5 @@ public static void Java(String[] args) {
 func Go() {
 
 }
+
 

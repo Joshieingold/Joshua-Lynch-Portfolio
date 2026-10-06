@@ -1,142 +1,121 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Joshua Lynch Portfolio</title>
-    <script src="./index.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <h2 id="header-title">
-        <span class="function-span">CreatePortfolio</span
-        ><span class="bracket-span">(</span
-        ><span class="string-span">"Joshua Lynch"</span
-        ><span class="bracket-span">)</span>;
-      </h2>
-    </div>
-    <div class="navigation-container">
-      <ul class="nav-list">
-        <li id="summary"><span>[</span>Summary<span>]</span></li>
-        <li id="skills"><span>[</span>Skills<span>]</span></li>
-        <li id="projects"><span>[</span>Projects<span>]</span></li>
-        <li id="education"><span>[</span>Education<span>]</span></li>
-      </ul>
-    </div>
-    <div id="summary-content" class="hidden">
-      <div class="summary-left">
-        <div class="profile-picture-wrapper">
-          <img src="https://avatars.githubusercontent.com/u/149664064?v=4" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Joshua Lynch's developer portfolio" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Joshua Lynch Portfolio</title>
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h2
+                id="header-title"
+                tabindex="0"
+                role="button"
+                aria-label="Back to home"
+            >
+                <span class="function-span">CreatePortfolio</span
+                ><span class="bracket-span">(</span
+                ><span class="string-span">"Joshua Lynch"</span
+                ><span class="bracket-span">)</span>;
+            </h2>
+        </header>
+        <nav class="navigation-container" aria-label="Sections">
+            <ul class="nav-list">
+                <li>
+                    <button id="summary">
+                        <span>[</span>Summary<span>]</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="skills">
+                        <span>[</span>Skills<span>]</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="projects">
+                        <span>[</span>Projects<span>]</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="education">
+                        <span>[</span>Education<span>]</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <main id="content">
+            <section id="summary-content" class="hidden">
+                <div class="summary-left">
+                    <div class="profile-picture-wrapper">
+                        <img
+                            src="./assets/ProfilePicture.jpg"
+                            alt="Joshua Lynch"
+                        />
+                    </div>
+                    <div class="name-detail-wrapper">
+                        <h3>Joshua Lynch</h3>
+                        <p>He/Him</p>
+                    </div>
+                    <div class="link-icon-container">
+                        <a
+                            class="link-icon github"
+                            href="https://github.com/joshieingold"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub"
+                        ></a>
+                        <a
+                            class="link-icon linked-in"
+                            href="https://www.linkedin.com/in/joshualynch2001/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="LinkedIn"
+                        ></a>
+                        <a
+                            class="link-icon resume"
+                            href="./assets/JoshuaLynch_Resume2026.pdf"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Resume"
+                        ></a>
+                    </div>
+                </div>
+                <div class="summary-right">
+                    <h2>About Me</h2>
+                    <p>
+                        Programer Analyst who plans and creates efficient
+                        software looking for opportunities to gain industry
+                        experience.
+                    </p>
+                    <p>
+                        Having played chess all of my life I was easily drawn
+                        into the thinking and problem solving aspects of
+                        programming and mastering the craft.
+                    </p>
+                    <p>
+                        I am always looking into new ways to become better at
+                        what I do.
+                    </p>
+                </div>
+            </section>
+            <section id="skills-content" class="hidden">
+                <h2>What I can do</h2>
+                <div class="skill-box-container" id="skill-container"></div>
+            </section>
+            <section id="projects-content" class="hidden">
+                <h2>Things I've built</h2>
+                <div class="project-grid" id="project-grid"></div>
+            </section>
+            <section id="education-content" class="hidden">
+                <h2>Where I learned</h2>
+                <div class="project-grid" id="education-grid"></div>
+            </section>
+        </main>
+        <div id="terminal" aria-hidden="true">
+            <span id="terminal-text"></span><span class="cursor">|</span>
         </div>
-        <div class="name-detail-wrapper">
-          <h3>Joshua Lynch</h3>
-          <p>He/Him</p>
-        </div>
-        <div class="link-icon-container">
-          <div class="link-icon github"></div>
-          <div class="link-icon linked-in"></div>
-          <div class="link-icon resume"></div>
-        </div>
-      </div>
-      <div class="summary-right">
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
-      </div>
-    </div>
-    <div id="skills-content" class="hidden">
-      <h2>What I can do</h2>
-      <div class="skill-box-container">
-        <div class="skill-box-wrapper" id="framework-terminal">
-          <div class="mini-nav">
-            <h3 class="terminal-name">Frameworks</h3>
-            <div class="button-container">
-              <div class="button expand" id="expand-terminal-framework">
-                <p>⧠</p>
-              </div>
-              <div class="button exit" id="exit-terminal">
-                <p>X</p>
-              </div>
-            </div>
-          </div>
-          <div class="skill-box"></div>
-        </div>
-
-        <div class="skill-box-wrapper" id="tool-terminal">
-          <div class="mini-nav">
-            <h3 class="terminal-name">Tools</h3>
-            <div class="button-container">
-              <div class="button expand" id="expand-terminal-tool">
-                <p>⧠</p>
-              </div>
-              <div class="button exit" id="exit-terminal">
-                <p>X</p>
-              </div>
-            </div>
-          </div>
-          <div class="skill-box"></div>
-        </div>
-        <div class="skill-box-wrapper" id="language-terminal">
-          <div class="mini-nav">
-            <h3 class="terminal-name">Languages</h3>
-            <div class="button-container">
-              <div class="button expand" id="expand-terminal-language">
-                <p>⧠</p>
-              </div>
-              <div class="button exit" id="exit-terminal">
-                <p>X</p>
-              </div>
-            </div>
-          </div>
-          <div class="skill-box"></div>
-        </div>
-        <div class="skill-box-wrapper" id="technique-terminal">
-          <div class="mini-nav">
-            <h3 class="terminal-name">Techniques</h3>
-            <div class="button-container">
-              <div class="button expand" id="expand-terminal-technique">
-                <p>⧠</p>
-              </div>
-              <div class="button exit" id="exit-terminal">
-                <p>X</p>
-              </div>
-            </div>
-          </div>
-          <div class="skill-box"></div>
-        </div>
-      </div>
-    </div>
-    <div id="terminal">
-      <div id="summary-content"></div>
-      <div id="skills-content"></div>
-      <div id="projects-content"></div>
-      <div id="education-content"></div>
-    </div>
-  </body>
+    </body>
 </html>
