@@ -1,13 +1,15 @@
 import { $, $$, sleep, reduceMotion } from "../utils/dom.mjs";
 
+const TIMING = { open: 150, perChar: 60, hold: 110, close: 200 };
+const wait = (ms) => sleep(reduceMotion ? 0 : ms);
+
 export class PageNavigator {
     #commands;
     #onShow;
     #current = null;
     #busy = false;
+    #pending = null; // page requested while a transition was running
 
-    // commands: { pageId: "text typed in the overlay" }
-    // onShow: called whenever the visible page changes (for cleanup)
     constructor({ commands, onShow = () => {} }) {
         this.#commands = commands;
         this.#onShow = onShow;
@@ -27,11 +29,22 @@ export class PageNavigator {
     }
 
     async go(page) {
-        if (this.#busy || page === this.#current) return;
+        // Remember the latest request instead of ignoring it
+        if (this.#busy) {
+            this.#pending = page;
+            return;
+        }
         this.#busy = true;
-        await this.#openTerminal(this.#commands[page]);
-        this.#show(page); // swap while the overlay still covers the screen
-        await this.#closeTerminal();
+        let next = page;
+        while (next !== null) {
+            this.#pending = null;
+            if (next !== this.#current) {
+                await this.#openTerminal(this.#commands[next]);
+                this.#show(next); // swap while the overlay still covers the screen
+                await this.#closeTerminal();
+            }
+            next = this.#pending;
+        }
         this.#busy = false;
     }
 
@@ -55,16 +68,16 @@ export class PageNavigator {
             out = $("#terminal-text");
         out.textContent = "";
         term.classList.add("open");
-        await sleep(reduceMotion ? 0 : 500);
+        await wait(TIMING.open);
         for (const ch of text) {
             out.textContent += ch;
-            await sleep(reduceMotion ? 0 : 70);
+            await wait(TIMING.perChar);
         }
-        await sleep(reduceMotion ? 0 : 250);
+        await wait(TIMING.hold);
     }
 
     async #closeTerminal() {
         $("#terminal").classList.remove("open");
-        await sleep(reduceMotion ? 0 : 500);
+        await wait(TIMING.close);
     }
 }

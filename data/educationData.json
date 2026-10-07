@@ -1,23 +1,23 @@
 [
     {
         "kind": "academic",
-        "name": "NBCC",
-        "program": "Programmer Analyst",
+        "name": "New Brunswick Community College (NBCC)",
+        "program": "Programmer Analyst Diploma",
         "years": "2025 - 2027",
-        "desc": "Well rounded training in all aspects of programming including C#, JavaScript, Java EE and Programming architecture.",
+        "desc": "A two-year program covering the full software development lifecycle, from object-oriented design and MVC web applications to databases and cloud deployment.",
         "highlights": [
-            "Final OOP project: a roguelike built with C# and WPF.",
-            "Built a site for keeping track of students in our program.",
-            "Class Representative, 3.96 GPA"
+            "Designed and built a roguelike game in C# and WPF as the final OOP project, applying inheritance, polymorphism and clean class architecture.",
+            "Developed a web app for tracking students across our program, from database schema through to the front end.",
+            "Elected Class Representative, bridging students and instructors while maintaining a 3.96 GPA."
         ],
         "courses": [
             "C#",
             "JavaScript",
-            "OOP",
+            "Object-Oriented Programming",
             "Bash",
-            "MVC-Framework",
+            "MVC Framework",
             "Java EE",
-            "MySql",
+            "MySQL",
             "Software Engineering",
             "AWS Cloud"
         ],
@@ -25,23 +25,14 @@
         "url": ""
     },
     {
-        "kind": "cert",
-        "name": "TODO: Certification name",
-        "program": "TODO: issuer",
-        "years": "TODO: year",
-        "desc": "TODO: what it covers and why it matters.",
-        "courses": [],
-        "url": ""
-    },
-    {
         "kind": "self",
-        "name": "Self-directed learning",
-        "program": "Projects & side work",
-        "desc": "Beyond coursework I learn by building things, usually in languages I haven't used in class.",
+        "name": "Self-Directed Learning",
+        "program": "Projects & Side Work",
+        "desc": "Outside of class, I learn by building real things, usually in languages and tools the curriculum doesn't cover, to understand how they work under the hood.",
         "highlights": [
-            "Wrote a JSON parser in C++ to learn how parsing works.",
-            "Building a chess database in Rust and Tauri.",
-            "Tuned my own Neovim setup in Lua."
+            "Wrote a JSON parser from scratch in C++ to learn how tokenizing and parsing work.",
+            "Building a chess database in Rust with a Tauri desktop front end.",
+            "Maintain a custom Neovim configuration in Lua, tuned for my own workflow."
         ],
         "courses": ["C++", "Rust", "Lua", "React"],
         "projects": ["json_parser", "node64", "neovim_config"]

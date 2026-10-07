@@ -4,33 +4,76 @@
         "items": [
             {
                 "signature": "def Python:",
-                "note": "My first language. I use it for data analysis, quick mark-ups, and solving programming problems."
+                "note": "My first language. I use it for data analysis, quick scripting, and working through programming problems."
             },
             {
                 "signature": "public void C#()",
-                "note": "I have a lot of experience with C# from NBCC and also using it at my past job for building applications."
+                "note": "My strongest language. Studied it at NBCC, built a roguelike in C# and WPF, and used it at my previous job to build applications."
             },
             {
                 "signature": "function Javascript()",
-                "note": "A necessity in modern programming. I use it sparingly in projects but I'm competent with best practices, as this page shows. Formal education at NBCC."
+                "note": "A necessity in modern development. I use it selectively, with a focus on best practices, as this page shows. Formal training at NBCC."
             },
-            { "signature": "<HTML>", "note": "TODO" },
-            { "signature": ".CSS {", "note": "TODO" },
-            { "signature": "function Bash {", "note": "TODO" },
-            { "signature": "CREATE FUNCTION MySQL()", "note": "TODO" },
-            { "signature": "CREATE FUNCTION SqlServer()", "note": "TODO" },
-            { "signature": "public static void Java()", "note": "TODO" },
-            { "signature": "func Go()", "note": "TODO" },
-            { "signature": "public void C++()", "note": "TODO" },
-            { "signature": "$function: { MongoDB: } ", "note": "TODO" }
+            {
+                "signature": "<HTML>",
+                "note": "[Add: what you've built with it, e.g. semantic markup, accessibility, this portfolio.]"
+            },
+            {
+                "signature": ".CSS {",
+                "note": "[Add: e.g. responsive layouts, Flexbox/Grid, theming, any preprocessors or frameworks.]"
+            },
+            {
+                "signature": "function Bash {",
+                "note": "Covered at NBCC. [Add: what you actually script, e.g. automation, deployment, dotfiles.]"
+            },
+            {
+                "signature": "CREATE FUNCTION MySQL()",
+                "note": "Studied at NBCC and used for the student-tracking site. [Add: schema design, joins, stored procedures, etc.]"
+            },
+            {
+                "signature": "CREATE FUNCTION SqlServer()",
+                "note": "[Add: where you used it, likely your past job, and what for.]"
+            },
+            {
+                "signature": "public static void Java()",
+                "note": "Learned Java EE at NBCC. [Add: servlets, JSP, anything you built.]"
+            },
+            {
+                "signature": "func Go()",
+                "note": "[Add: what you've built or are learning with Go.]"
+            },
+            {
+                "signature": "public void C++()",
+                "note": "Wrote a JSON parser from scratch to learn how tokenizing and parsing work."
+            },
+            {
+                "signature": "$function: { MongoDB: } ",
+                "note": "[Add: where you used it and why, e.g. a project or past job.]"
+            }
         ]
     },
     {
         "title": "Frameworks",
         "items": [
             {
-                "signature": "import Framework",
-                "note": "TODO: list frameworks you've used."
+                "signature": "import MVC",
+                "note": "Built MVC web applications at NBCC. [Add: ASP.NET MVC? Which one?]"
+            },
+            {
+                "signature": "import Java EE",
+                "note": "Studied at NBCC. [Add: specific technologies used.]"
+            },
+            {
+                "signature": "import WPF",
+                "note": "Used to build the UI for my roguelike OOP project."
+            },
+            {
+                "signature": "import React",
+                "note": "Self-taught. [Add: what you built with it.]"
+            },
+            {
+                "signature": "import Tauri",
+                "note": "Using it with Rust to build a desktop chess database."
             }
         ]
     },
@@ -39,7 +82,19 @@
         "items": [
             {
                 "signature": "git commit -m",
-                "note": "TODO: list tools (Git, VS Code, Docker...)."
+                "note": "[Add: your Git workflow, e.g. branching, pull requests, rebasing.]"
+            },
+            {
+                "signature": "nvim .",
+                "note": "My daily editor, with a custom Lua configuration I've tuned over time."
+            },
+            {
+                "signature": "aws configure",
+                "note": "Introduced to AWS Cloud at NBCC. [Add: specific services you've used.]"
+            },
+            {
+                "signature": "docker run",
+                "note": "[Only keep if true. Add what you use it for.]"
             }
         ]
     },
@@ -47,8 +102,20 @@
         "title": "Techniques",
         "items": [
             {
-                "signature": "// approach",
-                "note": "TODO: list techniques (testing, agile, API design...)."
+                "signature": "// OOP",
+                "note": "Applied inheritance, polymorphism and layered architecture in my C# roguelike."
+            },
+            {
+                "signature": "// MVC architecture",
+                "note": "Separating models, views and controllers in web applications, studied at NBCC."
+            },
+            {
+                "signature": "// parsing",
+                "note": "Hand-built a JSON parser in C++ to understand how parsers work."
+            },
+            {
+                "signature": "// software engineering",
+                "note": "Formal training at NBCC. [Add: agile, testing, code review, whichever you've really practiced.]"
             }
         ]
     }
