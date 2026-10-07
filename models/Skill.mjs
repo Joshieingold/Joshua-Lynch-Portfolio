@@ -1,15 +1,14 @@
 export class Skill {
-    // Constructor //
-    constructor(inTitle) {
-        this.title = inTitle;
-        this.items = [];
-    }
-
     ////////////
     // Fields //
     ////////////
     #title;
-    #items;
+    #items = [];
+
+    // Constructor //
+    constructor(inTitle) {
+        this.title = inTitle;
+    }
 
     /////////////////////
     // Getters/Setters //
@@ -18,36 +17,41 @@ export class Skill {
         return this.#title;
     }
     set title(inTitle) {
-        this.title = inTitle;
+        this.#title = inTitle;
     }
 
     get items() {
         return this.#items;
     }
     set items(inItems) {
-        this.items = inItems;
+        this.#items = inItems;
     }
 
     /////////////
     // Methods //
     /////////////
     addItem(item) {
-        this.items.push(item);
+        this.#items.push(item);
+    }
+
+    // Private fields are skipped by JSON.stringify, so expose them here
+    toJSON() {
+        return { title: this.#title, items: this.#items };
     }
 }
 
 export class SkillItem {
-    // Constructor //
-    constructor(inSignature, inNote) {
-        this.signature = inSignature;
-        this.note = inNote;
-    }
-
     ////////////
     // Fields //
     ////////////
     #signature;
     #note;
+
+    // Constructor //
+    constructor(inSignature, inNote) {
+        this.signature = inSignature;
+        this.note = inNote;
+    }
 
     /////////////////////
     // Getters/Setters //
@@ -56,12 +60,17 @@ export class SkillItem {
         return this.#signature;
     }
     set signature(inSignature) {
-        this.signature = inSignature;
+        this.#signature = inSignature;
     }
+
     get note() {
         return this.#note;
     }
     set note(inNote) {
-        this.note = inNote;
+        this.#note = inNote;
+    }
+
+    toJSON() {
+        return { signature: this.#signature, note: this.#note };
     }
 }

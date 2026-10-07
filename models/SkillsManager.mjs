@@ -1,14 +1,11 @@
-import { SkillItem } from "./Skill.mjs";
+import { Skill, SkillItem } from "./Skill.mjs";
+import { loadJson } from "../utils/http.mjs";
 
 export class SkillsManager {
-    // Constructor //
-    constructor() {
-        this.populate();
-    }
     ////////////
     // Fields //
     ////////////
-    #dataSource = "../data/skillData.json";
+    #dataSource = new URL("../data/skillData.json", import.meta.url);
     #language;
     #framework;
     #tool;
@@ -17,72 +14,84 @@ export class SkillsManager {
     /////////////////////
     // Getters/Setters //
     /////////////////////
-    get language() {}
-    set language(inLangauge) {
-        this.language = inLangauge;
+    get language() {
+        return this.#language;
+    }
+    set language(inLanguage) {
+        this.#language = inLanguage;
     }
 
-    get framework() {}
+    get framework() {
+        return this.#framework;
+    }
     set framework(inFramework) {
-        this.framework = inFramework;
+        this.#framework = inFramework;
     }
 
-    get tool() {}
+    get tool() {
+        return this.#tool;
+    }
     set tool(inTool) {
-        this.tool = inTool;
+        this.#tool = inTool;
     }
 
-    get technique() {}
+    get technique() {
+        return this.#technique;
+    }
     set technique(inTechnique) {
-        this.technique = inTechnique;
+        this.#technique = inTechnique;
+    }
+
+    // Every loaded category, in display order (this is what the view renders)
+    get all() {
+        return [
+            this.#language,
+            this.#framework,
+            this.#tool,
+            this.#technique,
+        ].filter(Boolean);
     }
 
     /////////////
     // Methods //
     /////////////
     async populate() {
-        try {
-            let data = fetch(this.#dataSource);
-            for (let i = 0; i < data.length; i++) {
-                let currentDataSet = data[i];
-                let skillObj = new Skill(currentDataSet.title);
-                for (let j = 0; j < currentDataSet.items.length; j++) {
-                    let currentItem = currentDataSet.items[j];
-                    let itemObj = new SkillItem(
-                        currentItem.signature,
-                        currentItem.note,
-                    );
-                    skillObj.addItem(itemObj);
-                }
-                this.initializeProperty(skillObj.title, skillObj);
+        const categories = await loadJson(this.#dataSource);
+
+        for (const category of categories) {
+            const skill = new Skill(category.title);
+            for (const item of category.items) {
+                skill.addItem(new SkillItem(item.signature, item.note));
             }
-        } catch (skillManagerPopulateErr) {
-            console.error("ERROR: ", skillManagerPopulateErr);
+            this.initializeProperty(skill.title, skill);
         }
     }
+
     toJSON() {
         return {
-            langauge: this.#language,
+            language: this.#language,
             framework: this.#framework,
             tool: this.#tool,
             technique: this.#technique,
         };
     }
+
     initializeProperty(propName, propData) {
         switch (propName) {
-            case "language":
+            case "Languages":
                 this.language = propData;
-            case "framework":
+                break;
+            case "Frameworks":
                 this.framework = propData;
-            case "tool":
+                break;
+            case "Tools":
                 this.tool = propData;
-            case "technique":
+                break;
+            case "Techniques":
                 this.technique = propData;
+                break;
             default:
-                throw new Error(
-                    "ERROR: Unable to intialize property ",
-                    propName,
-                );
+                throw new Error(`Unable to initialize property "${propName}"`);
         }
     }
 }

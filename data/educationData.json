@@ -1,0 +1,49 @@
+[
+    {
+        "kind": "academic",
+        "name": "NBCC",
+        "program": "Programmer Analyst",
+        "years": "2025 - 2027",
+        "desc": "Well rounded training in all aspects of programming including C#, JavaScript, Java EE and Programming architecture.",
+        "highlights": [
+            "Final OOP project: a roguelike built with C# and WPF.",
+            "Built a site for keeping track of students in our program.",
+            "Class Representative, 3.96 GPA"
+        ],
+        "courses": [
+            "C#",
+            "JavaScript",
+            "OOP",
+            "Bash",
+            "MVC-Framework",
+            "Java EE",
+            "MySql",
+            "Software Engineering",
+            "AWS Cloud"
+        ],
+        "projects": ["coders_crypt", "nbcc_obituary"],
+        "url": ""
+    },
+    {
+        "kind": "cert",
+        "name": "TODO: Certification name",
+        "program": "TODO: issuer",
+        "years": "TODO: year",
+        "desc": "TODO: what it covers and why it matters.",
+        "courses": [],
+        "url": ""
+    },
+    {
+        "kind": "self",
+        "name": "Self-directed learning",
+        "program": "Projects & side work",
+        "desc": "Beyond coursework I learn by building things, usually in languages I haven't used in class.",
+        "highlights": [
+            "Wrote a JSON parser in C++ to learn how parsing works.",
+            "Building a chess database in Rust and Tauri.",
+            "Tuned my own Neovim setup in Lua."
+        ],
+        "courses": ["C++", "Rust", "Lua", "React"],
+        "projects": ["json_parser", "node64", "neovim_config"]
+    }
+]

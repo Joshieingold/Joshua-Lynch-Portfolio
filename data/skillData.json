@@ -1,26 +1,55 @@
-{
-    "title": "languages",
-    "items": [
-        {
-            "signature": "def Python:",
-            "note": "My first language. I use it for data analysis, quick mark-ups, and solving programming problems."
-        },
-        {
-            "signature": "public void c#():",
-            "note": "I have a lot of experience with C# from NBCC and also using it at my past job for building applications."
-        },
-        {
-            "signature": "function Javascript()",
-            "note": "A necessity in modern programming. I use it sparingly in projects but I'm competent with best practices, as this page shows. Formal education at NBCC."
-        },
-        { "sig": "<HTML>", "note": "TODO" },
-        { "sig": ".CSS {", "note": "TODO" },
-        { "sig": "function Bash {", "note": "TODO" },
-        { "sig": "CREATE FUNCTION MySQL()", "note": "TODO" },
-        { "sig": "CREATE FUNCTION SqlServer()", "note": "TODO" },
-        { "sig": "public static void Java()", "note": "TODO" },
-        { "sig": "func Go()", "note": "TODO" },
-        { "sig": "public void C++()", "note": "TODO" },
-        { "sig": "$function: { MongoDB: } ", "note": "TODO" }
-    ]
-}
+[
+    {
+        "title": "Languages",
+        "items": [
+            {
+                "signature": "def Python:",
+                "note": "My first language. I use it for data analysis, quick mark-ups, and solving programming problems."
+            },
+            {
+                "signature": "public void C#()",
+                "note": "I have a lot of experience with C# from NBCC and also using it at my past job for building applications."
+            },
+            {
+                "signature": "function Javascript()",
+                "note": "A necessity in modern programming. I use it sparingly in projects but I'm competent with best practices, as this page shows. Formal education at NBCC."
+            },
+            { "signature": "<HTML>", "note": "TODO" },
+            { "signature": ".CSS {", "note": "TODO" },
+            { "signature": "function Bash {", "note": "TODO" },
+            { "signature": "CREATE FUNCTION MySQL()", "note": "TODO" },
+            { "signature": "CREATE FUNCTION SqlServer()", "note": "TODO" },
+            { "signature": "public static void Java()", "note": "TODO" },
+            { "signature": "func Go()", "note": "TODO" },
+            { "signature": "public void C++()", "note": "TODO" },
+            { "signature": "$function: { MongoDB: } ", "note": "TODO" }
+        ]
+    },
+    {
+        "title": "Frameworks",
+        "items": [
+            {
+                "signature": "import Framework",
+                "note": "TODO: list frameworks you've used."
+            }
+        ]
+    },
+    {
+        "title": "Tools",
+        "items": [
+            {
+                "signature": "git commit -m",
+                "note": "TODO: list tools (Git, VS Code, Docker...)."
+            }
+        ]
+    },
+    {
+        "title": "Techniques",
+        "items": [
+            {
+                "signature": "// approach",
+                "note": "TODO: list techniques (testing, agile, API design...)."
+            }
+        ]
+    }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My professional portfolio",
+  "homepage": "https://github.com/Joshieingold/Portfolio2026#readme",
+  "bugs": {
+    "url": "https://github.com/Joshieingold/Portfolio2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joshieingold/Portfolio2026.git"
+  },
+  "author": "Joshua Lynch",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}

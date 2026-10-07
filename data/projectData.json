@@ -1,0 +1,120 @@
+[
+    {
+        "name": "json_parser",
+        "desc": "A simple JSON parser built in C++.",
+        "long": [
+            "Built to understand how parsers work from the ground up, without any libraries.",
+            "Uses recursive descent to handle nested objects and arrays."
+        ],
+        "image": "./assets/ProjectScreenshots/json_parser.png",
+        "stack": ["C++"],
+        "url": "https://github.com/Joshieingold/json-parser",
+        "snippet": {
+            "lang": "C++",
+            "caption": "Recursive descent on values",
+            "file": "./data/snippets/json_parser.cpp"
+        }
+    },
+    {
+        "name": "coders_crypt",
+        "desc": "A roguelike game made for our OOP final.",
+        "long": "In this project I learned about Model View Controller frameworks, unit testing, documentation, and project planning. I acted project manager and primary programmer.",
+        "stack": ["WPF", "C#"],
+        "url": "https://github.com/Joshieingold/oop-final-rpg-game",
+        "image": "./assets/ProjectScreenshots/coders_crypt.png",
+        "snippet": {
+            "lang": "C#",
+            "caption": "GameManager class",
+            "file": "./data/snippets/GameManager.cs"
+        }
+    },
+    {
+        "name": "neovim_config",
+        "desc": "My personalized coding environment.",
+        "long": "Used as my primary editor, everything is custom to my own specifications and easily portable regardless of the computer I am using.",
+        "stack": ["Lua"],
+        "url": "https://github.com/Joshieingold/Nvim",
+        "image": "./assets/ProjectScreenshots/nvim_config.png"
+    },
+    {
+        "name": "nbcc_obituary",
+        "desc": "Fun website for keeping track of students in our program.",
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "url": "https://github.com/Joshieingold/NBCC-Obituary",
+        "site": "https://joshieingold.github.io/NBCC-Obituary/",
+        "image": "./assets/ProjectScreenshots/nbcc_obiturary.png"
+    },
+    {
+        "name": "autobox_4",
+        "desc": "General purpose warehouse automation software.",
+        "stack": ["C#", "WPF", "Firebase"],
+        "url": "https://github.com/Joshieingold/Autobox-4"
+    },
+    {
+        "name": "minesolver",
+        "desc": "Automation software for solving and finishing minesweeper games.",
+        "stack": ["C#", "WinUI"],
+        "url": "https://github.com/Joshieingold/Minesolver"
+    },
+    {
+        "name": "valentines_letter",
+        "desc": "Small website for a Valentine's yes or no.",
+        "stack": ["HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/Joshieingold/Valentines"
+    },
+    {
+        "name": "finnovate_clone",
+        "desc": "UI clone of the company Finnovate's website.",
+        "stack": ["React", "HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/Joshieingold/finnovate-clone"
+    },
+    {
+        "name": "node64",
+        "desc": "Open source chess database and analysis software.",
+        "stack": ["Tauri", "React", "Rust", "HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/Joshieingold/node64"
+    },
+    {
+        "name": "cards_to_drink_by",
+        "desc": "Cards Against Humanity inspired web-socket integrated party game.",
+        "stack": ["React", "MySQL", "HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/Joshieingold/cards-to-drink-by"
+    },
+    {
+        "name": "this_portfolio",
+        "desc": "The terminal-themed site you're looking at.",
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "url": "https://github.com/Joshieingold/Portfolio2026",
+        "site": "#"
+    },
+    {
+        "name": "chess_visualization_trainer",
+        "desc": "Chess app that reads moves played out loud.",
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "url": "https://github.com/Joshieingold/chess-visualization-trainer"
+    },
+    {
+        "name": "obs_chess",
+        "desc": "OBS plugin for keeping track of wins and losses on chess.com.",
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "url": "https://github.com/Joshieingold/obs-chess"
+    },
+    {
+        "name": "go_with_friends",
+        "desc": "Local multiplayer game of Go.",
+        "stack": ["JavaScript", "HTML", "CSS", "React"],
+        "url": "https://github.com/Joshieingold/GoWithFriends"
+    },
+    {
+        "name": "rojers_the_snake_method",
+        "desc": "Online snake game with leaderboard and characters.",
+        "stack": ["JavaScript", "HTML", "CSS", "React"],
+        "url": "https://github.com/Joshieingold/Rojers-The-Snake-Method"
+    },
+    {
+        "name": "poker_trainer",
+        "desc": "Poker game that helps identify hands and best moves.",
+        "stack": ["JavaScript", "HTML", "CSS", "React"],
+        "url": "https://github.com/Joshieingold/poker-trainer"
+    }
+]
