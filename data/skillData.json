@@ -1,0 +1,26 @@
+{
+    "title": "languages",
+    "items": [
+        {
+            "signature": "def Python:",
+            "note": "My first language. I use it for data analysis, quick mark-ups, and solving programming problems."
+        },
+        {
+            "signature": "public void c#():",
+            "note": "I have a lot of experience with C# from NBCC and also using it at my past job for building applications."
+        },
+        {
+            "signature": "function Javascript()",
+            "note": "A necessity in modern programming. I use it sparingly in projects but I'm competent with best practices, as this page shows. Formal education at NBCC."
+        },
+        { "sig": "<HTML>", "note": "TODO" },
+        { "sig": ".CSS {", "note": "TODO" },
+        { "sig": "function Bash {", "note": "TODO" },
+        { "sig": "CREATE FUNCTION MySQL()", "note": "TODO" },
+        { "sig": "CREATE FUNCTION SqlServer()", "note": "TODO" },
+        { "sig": "public static void Java()", "note": "TODO" },
+        { "sig": "func Go()", "note": "TODO" },
+        { "sig": "public void C++()", "note": "TODO" },
+        { "sig": "$function: { MongoDB: } ", "note": "TODO" }
+    ]
+}

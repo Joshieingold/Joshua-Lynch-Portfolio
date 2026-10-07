@@ -235,7 +235,7 @@ h2 {
     line-height: 1.6;
 }
 .profile-picture-wrapper {
-    width: min(240px, 100%);
+    width: min(340px, 100%);
     aspect-ratio: 1/1;
 }
 .profile-picture-wrapper img {
@@ -399,10 +399,266 @@ h2 {
     content: "$ ";
     color: var(--comment);
 }
+button.card-link {
+    padding: 0;
+}
 /* Expanded skill grows over the others (positioned by index.js) */
 .skill-box-wrapper.active {
     cursor: default;
     transform: none !important;
+}
+
+/* Project filters */
+#project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 95%;
+    margin-bottom: 16px;
+}
+.filter-chip {
+    color: var(--string-color);
+    border: 1px solid var(--string-color);
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    transition:
+        opacity 0.2s,
+        background-color 0.2s,
+        color 0.2s;
+}
+.filter-chip span {
+    color: var(--comment);
+    margin-left: 2px;
+}
+.filter-chip:hover {
+    opacity: 1;
+}
+.filter-chip.on {
+    opacity: 1;
+    background: var(--string-color);
+    color: var(--background);
+}
+.filter-chip.on span {
+    color: inherit;
+}
+.filter-chip.clear {
+    color: var(--red);
+    border-color: var(--red);
+    opacity: 1;
+}
+.tag[data-tag] {
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+.tag[data-tag]:hover {
+    background: var(--string-color);
+    color: var(--background);
+}
+
+/* Bash-style links: $ cmd arg */
+.sh-cmd {
+    color: var(--function-color);
+}
+.sh-arg {
+    color: var(--string-color);
+}
+.card-link:hover .sh-cmd,
+.card-link:hover .sh-arg,
+.card-link:focus-visible .sh-cmd,
+.card-link:focus-visible .sh-arg {
+    text-decoration: underline;
+}
+
+/* Education: a terminal-style timeline instead of cards */
+#education-grid {
+    display: block;
+    max-width: 760px;
+}
+.edu-entry {
+    position: relative;
+    margin: 0 0 28px 6px;
+    padding-left: 18px;
+    border-left: 2px solid var(--comment);
+}
+.edu-entry::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+}
+.edu-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 4px;
+}
+.edu-name {
+    margin: 0;
+    font-size: 1.15rem;
+}
+.edu-name::before {
+    content: "> ";
+    color: var(--green);
+}
+.edu-heading {
+    flex-basis: 100%;
+    margin: 8px 0 16px;
+    font-size: 1rem;
+    color: var(--comment);
+    text-align: left;
+}
+.edu-heading::before {
+    content: "$ ";
+    color: var(--green);
+}
+.edu-heading:first-child {
+    margin-top: 0;
+}
+.edu-years {
+    color: var(--comment);
+}
+.edu-list {
+    margin: 10px 0 0;
+    padding: 0;
+}
+.edu-list li {
+    position: relative;
+    padding-left: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    user-select: text;
+}
+.edu-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: var(--comment);
+}
+
+/* "see more" button in the card header */
+.see-more {
+    color: var(--white);
+    border: 1px solid var(--comment);
+    border-radius: 7px;
+    padding: 2px 9px;
+    margin-right: 2px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+.see-more::after {
+    content: " ↗";
+}
+.see-more:hover,
+.see-more:focus-visible {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+/* Card thumbnail */
+.thumb {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid var(--comment);
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--alt-background);
+}
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+.thumb:hover img,
+.thumb:focus-visible img {
+    transform: scale(1.04);
+}
+
+/* Details dialog */
+#project-dialog {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--foreground);
+    width: min(720px, 92vw);
+    max-width: none;
+    max-height: 90vh;
+    overflow: hidden;
+}
+#project-dialog::backdrop {
+    background: rgba(26, 27, 38, 0.75);
+}
+#project-dialog .detail {
+    max-height: 90vh;
+}
+#project-dialog .skill-box {
+    min-height: 0;
+}
+.shot {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    border: 1px solid var(--comment);
+    border-radius: 6px;
+}
+.detail .note + .note {
+    margin-top: 10px;
+}
+.snippet {
+    margin-top: 14px;
+}
+.snippet .note {
+    color: var(--comment);
+}
+.snippet pre {
+    margin: 6px 0 0;
+    padding: 12px;
+    overflow-x: auto;
+    background: var(--alt-background);
+    border: 1px solid var(--comment);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    tab-size: 4;
+}
+
+/* Syntax highlighting (uses your palette, so light/dark both work) */
+.tok-comment {
+    color: var(--comment);
+    font-style: italic;
+}
+.tok-string {
+    color: var(--string-color);
+}
+.tok-number {
+    color: var(--orange);
+}
+.tok-keyword {
+    color: var(--keyword-color);
+}
+.tok-function {
+    color: var(--function-color);
+}
+.tok-type {
+    color: var(--cyan);
 }
 
 /* Typing overlay */
