@@ -1,5 +1,6 @@
 import { $, $$, sleep, reduceMotion } from "../utils/dom.mjs";
 
+// For tuning the terminal window.
 const TIMING = { open: 150, perChar: 60, hold: 110, close: 200 };
 const wait = (ms) => sleep(reduceMotion ? 0 : ms);
 
