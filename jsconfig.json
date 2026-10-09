@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es2022",
+        "moduleResolution": "bundler"
+    },
+    "include": ["**/*.js", "**/*.mjs"],
+    "exclude": ["node_modules"]
+}

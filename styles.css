@@ -724,6 +724,11 @@ button.card-link {
         animation: none !important;
     }
 }
+/* ==========================================================
+   APPEND THIS TO THE END OF styles.css
+   Theme picker, theme-aware icons, contact page, 5-item nav
+   ========================================================== */
+
 /* Nav now holds the menu plus the theme picker */
 .navigation-container {
     flex-direction: column;
@@ -963,4 +968,65 @@ button.card-link[disabled] {
     .mail-actions {
         margin-left: 0;
     }
+}
+
+/* Summary links: labeled terminal-style buttons */
+.link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(260px, 100%);
+}
+.link-list-label {
+    color: var(--comment);
+    font-size: 0.9rem;
+}
+.link-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 9px 14px;
+    border: 2px solid var(--foreground);
+    border-radius: 8px;
+    background: var(--alt-background);
+    box-shadow: 0 3px 0 var(--comment);
+    text-decoration: none;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        border-color 0.2s;
+}
+.link-btn::before {
+    content: "$";
+    color: var(--comment);
+}
+.link-btn::after {
+    content: "\2197";
+    margin-left: auto;
+    color: var(--comment);
+    transition: transform 0.2s;
+}
+.link-btn:hover,
+.link-btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--function-color);
+    box-shadow: 0 5px 0 var(--comment);
+}
+.link-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 var(--comment);
+}
+.link-btn:hover::after,
+.link-btn:focus-visible::after {
+    transform: translate(2px, -2px);
+}
+.link-btn.primary {
+    background: var(--function-color);
+    border-color: var(--function-color);
+}
+.link-btn.primary .sh-cmd,
+.link-btn.primary .sh-arg,
+.link-btn.primary::before,
+.link-btn.primary::after {
+    color: var(--background);
 }
