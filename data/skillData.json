@@ -16,39 +16,39 @@
             },
             {
                 "signature": "<HTML>",
-                "note": "[Add: what you've built with it, e.g. semantic markup, accessibility, this portfolio.]"
+                "note": "A fundamental building block for building anything on the web. I am comfortable with building modern websites using html."
             },
             {
                 "signature": ".CSS {",
-                "note": "[Add: e.g. responsive layouts, Flexbox/Grid, theming, any preprocessors or frameworks.]"
+                "note": "I have skills creating responsive websites incorperating dynamic stylings of css."
             },
             {
                 "signature": "function Bash {",
-                "note": "Covered at NBCC. [Add: what you actually script, e.g. automation, deployment, dotfiles.]"
+                "note": "Covered at NBCC and my personal machine is Linux. I am extreamly comforable with the terminal and have learned a lot about scripting and general bash commands."
             },
             {
                 "signature": "CREATE FUNCTION MySQL()",
-                "note": "Studied at NBCC and used for the student-tracking site. [Add: schema design, joins, stored procedures, etc.]"
+                "note": "Studied at NBCC and used in almost all courses involving a database. I have used MySQL in a few personal projects and am comfortable working in SQL environments to create reports from data."
             },
             {
                 "signature": "CREATE FUNCTION SqlServer()",
-                "note": "[Add: where you used it, likely your past job, and what for.]"
+                "note": "Have learned how to incorperate SQL using Entity Relations in C#. This has given me a more well rounded understanding of generalized SQL and how to manipulate data using programming lanaguages."
             },
             {
                 "signature": "public static void Java()",
-                "note": "Learned Java EE at NBCC. [Add: servlets, JSP, anything you built.]"
+                "note": "Learned Java EE at NBCC. I have an understanding of managing servlets, jsps and general java syntax using modern build systems such as springboot."
             },
             {
                 "signature": "func Go()",
-                "note": "[Add: what you've built or are learning with Go.]"
+                "note": "I have messed around a little bit with go. I have not developped any major projects with it but I love the design of the lanaguage and have created some terminal applications with it."
             },
             {
                 "signature": "public void C++()",
-                "note": "Wrote a JSON parser from scratch to learn how tokenizing and parsing work."
+                "note": "Wrote a JSON parser from scratch to learn how tokenizing and parsing work. This is also the main langauage I use to solve programming problems."
             },
             {
                 "signature": "$function: { MongoDB: } ",
-                "note": "[Add: where you used it and why, e.g. a project or past job.]"
+                "note": "I have learned  how to use mongodb at NBCC and my main database has been firebase which is similar. As such I am very familiar with NoSQL databases. "
             }
         ]
     },
@@ -57,19 +57,19 @@
         "items": [
             {
                 "signature": "import MVC",
-                "note": "Built MVC web applications at NBCC. [Add: ASP.NET MVC? Which one?]"
+                "note": "Built MVC web applications at NBCC. I have experience building applications with the MVC framework in Javascript (such as this portofolio), Java EE, and C# (ASP .NET)"
             },
             {
                 "signature": "import Java EE",
-                "note": "Studied at NBCC. [Add: specific technologies used.]"
+                "note": "Studied at NBCC. Worked using things such as Jakarta, Entity Relations, and springboot."
             },
             {
                 "signature": "import WPF",
-                "note": "Used to build the UI for my roguelike OOP project."
+                "note": "Used to build the UI for my roguelike OOP project as well as all asignments in courses such as Object Oriented Programming and Intro to programming, among others."
             },
             {
                 "signature": "import React",
-                "note": "Self-taught. [Add: what you built with it.]"
+                "note": "Self-taught. This is my go to framework for building web applications as it allows the programmer to have very modular code with the logic coupled to the components."
             },
             {
                 "signature": "import Tauri",
@@ -90,11 +90,7 @@
             },
             {
                 "signature": "aws configure",
-                "note": "Introduced to AWS Cloud at NBCC. [Add: specific services you've used.]"
-            },
-            {
-                "signature": "docker run",
-                "note": "[Only keep if true. Add what you use it for.]"
+                "note": "Introduced to AWS Cloud at NBCC and completed online certificatation for it. Learned about things such as AWS Iam, AWS Elastic Beanstock, Amazon EC2, AWS Lambda, among others. ]"
             }
         ]
     },
@@ -103,19 +99,19 @@
         "items": [
             {
                 "signature": "// OOP",
-                "note": "Applied inheritance, polymorphism and layered architecture in my C# roguelike."
+                "note": "Applied inheritance, polymorphism and layered architecture in my C# roguelike and during course work."
+            },
+            {
+                "signature": "// Unit Testing",
+                "note": "Expereinece automating and creating black box and white box testing on codebases."
             },
             {
                 "signature": "// MVC architecture",
                 "note": "Separating models, views and controllers in web applications, studied at NBCC."
             },
             {
-                "signature": "// parsing",
-                "note": "Hand-built a JSON parser in C++ to understand how parsers work."
-            },
-            {
                 "signature": "// software engineering",
-                "note": "Formal training at NBCC. [Add: agile, testing, code review, whichever you've really practiced.]"
+                "note": "Formal training at NBCC. Learned about project planning, agile and kanban methodologies and system diagramming."
             }
         ]
     }
