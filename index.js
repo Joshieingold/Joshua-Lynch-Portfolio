@@ -2,9 +2,12 @@ import { $ } from "./utils/dom.mjs";
 import { SkillsManager } from "./models/SkillsManager.mjs";
 import { ProjectsManager } from "./models/ProjectsManager.mjs";
 import { EducationManager } from "./models/EducationManager.mjs";
+import { ThemeManager } from "./models/ThemeManager.mjs";
 import { SkillsView } from "./views/SkillsView.mjs";
 import { ProjectsView } from "./views/ProjectsView.mjs";
 import { EducationView } from "./views/EducationView.mjs";
+import { ThemeView } from "./views/ThemeView.mjs";
+import { ContactView } from "./views/ContactView.mjs";
 import { PageNavigator } from "./controllers/PageNavigator.mjs";
 
 const COMMANDS = {
@@ -13,7 +16,19 @@ const COMMANDS = {
     skills: "which skills",
     projects: "ls ./projects",
     education: "cat ./education",
+    contact: 'mail -s "hello" joshua',
 };
+
+// Contact information for email
+const CONTACT = {
+    to: "",
+    endpoint: "https://formspree.io/f/xyekwlbw",
+};
+
+// Theme first so the saved colours are applied before anything is shown
+const themes = new ThemeManager();
+const themeView = new ThemeView(themes, $("#theme-picker"));
+themeView.render();
 
 // Models
 const skills = new SkillsManager();
@@ -28,6 +43,8 @@ const educationView = new EducationView(
     projects,
     $("#education-grid"),
 );
+const contactView = new ContactView($("#contact-container"), CONTACT);
+contactView.render();
 
 // Navigation
 const nav = new PageNavigator({

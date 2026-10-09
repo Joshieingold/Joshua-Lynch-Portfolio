@@ -66,9 +66,15 @@
         "desc": "General purpose warehouse automation software.",
         "stack": ["C#", "WPF", "Firebase"],
         "url": "https://github.com/Joshieingold/Autobox-4",
+        "image": "../assets/ProjectScreenshots/autobox.png",
+        "snippet": {
+            "lang": "C#",
+            "caption": "Example of automation used for populating excel sheets",
+            "file": "./data/snippets/autobox.cs"
+        },
         "long": [
-            "Autobox is a desktop tool that automates repetitive warehouse data work. It pulls data out of Excel files, runs the calculations, and reports on contractor inventories. It can also enter information directly into other warehouse software, which saves time and cuts down on manual entry errors.",
-            "It also compares two lists to show the differences, formats serial numbers and other chunks of data, merges Excel files, and sorts data based on what is on screen. It tracks how many devices are processed each day against a goal, prints straight to a printer, and has custom themes.",
+            "Autobox is a desktop tool that automates repetitive warehouse data work. It pulls data out of Excel files, runs the calculations, and reports on contractor inventories. It can also enter information directly into other warehouse software.",
+            "It also compares lists to show the differences, formats serial numbers and other chunks of data, merges Excel files, and sorts data based on what is on screen. It tracks how many devices are processed each day against a goal, prints straight to a printer, and has custom themes.",
             "The solution is split into a UI project and a separate class library for the logic. It is used by Rogers Communications."
         ]
     },
@@ -135,7 +141,12 @@
     {
         "name": "rojers_the_snake_method",
         "desc": "Online snake game with leaderboard and characters.",
-        "stack": ["JavaScript", "HTML", "CSS", "React"],
+        "stack": ["JavaScript", "HTML", "CSS", "React", "Firebase"],
+        "image": "../assets/ProjectScreenshots/snake_method.png",
+        "long": [
+            "Online Warehouse themed snake game.",
+            "Features playable characters and an online real-time leaderboard!"
+        ],
         "url": "https://github.com/Joshieingold/Rojers-The-Snake-Method"
     },
     {

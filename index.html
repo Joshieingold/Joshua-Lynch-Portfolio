@@ -22,30 +22,43 @@
                 ><span class="bracket-span">)</span>;
             </h2>
         </header>
-        <nav class="navigation-container" aria-label="Sections">
-            <ul class="nav-list">
-                <li>
-                    <button id="summary">
-                        <span>[</span>Summary<span>]</span>
-                    </button>
-                </li>
-                <li>
-                    <button id="skills">
-                        <span>[</span>Skills<span>]</span>
-                    </button>
-                </li>
-                <li>
-                    <button id="projects">
-                        <span>[</span>Projects<span>]</span>
-                    </button>
-                </li>
-                <li>
-                    <button id="education">
-                        <span>[</span>Education<span>]</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+        <div class="navigation-container">
+            <nav class="nav-main" aria-label="Sections">
+                <ul class="nav-list">
+                    <li>
+                        <button id="summary">
+                            <span>[</span>Summary<span>]</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="skills">
+                            <span>[</span>Skills<span>]</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="projects">
+                            <span>[</span>Projects<span>]</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="education">
+                            <span>[</span>Education<span>]</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="contact">
+                            <span>[</span>Contact<span>]</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <div
+                id="theme-picker"
+                class="theme-picker"
+                role="group"
+                aria-label="Color theme"
+            ></div>
+        </div>
         <main id="content">
             <section id="summary-content" class="hidden">
                 <div class="summary-left">
@@ -116,6 +129,10 @@
             <section id="education-content" class="hidden">
                 <h2>Where I learned</h2>
                 <div class="project-grid" id="education-grid"></div>
+            </section>
+            <section id="contact-content" class="hidden">
+                <h2>Say hello</h2>
+                <div id="contact-container"></div>
             </section>
         </main>
         <div id="terminal" aria-hidden="true">

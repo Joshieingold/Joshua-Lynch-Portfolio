@@ -724,3 +724,243 @@ button.card-link {
         animation: none !important;
     }
 }
+/* Nav now holds the menu plus the theme picker */
+.navigation-container {
+    flex-direction: column;
+}
+.nav-main {
+    width: 100%;
+}
+body.mini .nav-list li {
+    width: 20%;
+}
+
+/* Icons follow the chosen theme (data-mode is set by ThemeManager),
+   not just the OS setting */
+:root[data-mode="dark"] .link-icon {
+    background-color: var(--background);
+}
+:root[data-mode="light"] .link-icon {
+    background-color: var(--alt-background);
+}
+:root[data-mode] .link-icon:hover,
+:root[data-mode] .link-icon:focus-visible {
+    background-color: var(--function-color);
+}
+:root[data-mode="dark"] .github {
+    background-image: url("./assets/Icons/github-dark.png");
+}
+:root[data-mode="dark"] .linked-in {
+    background-image: url("./assets/Icons/linked-in-dark.png");
+}
+:root[data-mode="dark"] .resume {
+    background-image: url("https://img.icons8.com/?size=100&id=61016&format=png&color=FFFFFF");
+}
+:root[data-mode="light"] .github {
+    background-image: url("./assets/Icons/github-light.png");
+}
+:root[data-mode="light"] .linked-in {
+    background-image: url("./assets/Icons/linked-in-light.png");
+}
+:root[data-mode="light"] .resume {
+    background-image: url("https://img.icons8.com/?size=100&id=61016&format=png&color=000000");
+}
+
+/* Theme picker: only on the home screen */
+.theme-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 2.5em;
+    user-select: none;
+}
+body.mini .theme-picker {
+    display: none;
+}
+.theme-label {
+    color: var(--comment);
+    font-size: 0.9rem;
+}
+.theme-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 680px;
+}
+.theme-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 10px 3px 8px;
+    border: 1px solid var(--comment);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        color 0.2s;
+}
+.theme-chip:hover,
+.theme-chip:focus-visible {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+.theme-chip[aria-pressed="true"] {
+    border-color: var(--green);
+    color: var(--green);
+}
+.swatch {
+    display: inline-flex;
+}
+.swatch i {
+    width: 11px;
+    height: 11px;
+    margin-left: -3px;
+    border-radius: 50%;
+    border: 1px solid var(--comment);
+}
+.swatch i:first-child {
+    margin-left: 0;
+}
+.swatch i:nth-child(1) {
+    background: var(--a);
+}
+.swatch i:nth-child(2) {
+    background: var(--b);
+}
+.swatch i:nth-child(3) {
+    background: var(--c);
+}
+
+/* Contact page: a mail session in a terminal window */
+#contact-container {
+    width: min(720px, 100%);
+}
+.mail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mail-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.mail-key {
+    flex: 0 0 5.5em;
+    text-align: right;
+    color: var(--function-color);
+}
+.mail-static {
+    flex: 1;
+    color: var(--string-color);
+}
+.mail-row input,
+.mail-row textarea {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    color: var(--foreground);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dashed var(--comment);
+    border-radius: 0;
+    padding: 2px 0;
+    caret-color: var(--green);
+}
+.mail-row input:focus,
+.mail-row textarea:focus {
+    border-color: var(--green);
+}
+.mail-row input::placeholder,
+.mail-row textarea::placeholder {
+    color: var(--comment);
+    opacity: 0.7;
+}
+.mail-body {
+    align-items: flex-start;
+}
+.mail-body .mail-key {
+    padding-top: 6px;
+}
+.mail-row textarea {
+    border: 1px dashed var(--comment);
+    padding: 6px 8px;
+    line-height: 1.5;
+    min-height: 8em;
+    resize: vertical;
+}
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.mail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 18px;
+    margin: 6px 0 0 calc(5.5em + 10px);
+}
+.mail-hint {
+    color: var(--comment);
+    font-size: 0.8rem;
+}
+button.card-link[disabled] {
+    opacity: 0.5;
+    cursor: default;
+}
+.mail-log {
+    margin-top: 6px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+.mail-log:empty {
+    display: none;
+}
+.mail-log .dim {
+    color: var(--comment);
+}
+.mail-log .ok {
+    color: var(--green);
+}
+.mail-log .err {
+    color: var(--red);
+}
+
+/* Small / short screens */
+@media (max-height: 640px) {
+    .nav-list {
+        gap: 1em;
+    }
+    .theme-picker {
+        margin-top: 1.2em;
+    }
+}
+@media (max-width: 480px) {
+    body.mini .nav-list {
+        font-size: 9pt;
+    }
+    .mail-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+    }
+    .mail-key {
+        flex-basis: auto;
+        text-align: left;
+    }
+    .mail-body .mail-key {
+        padding-top: 0;
+    }
+    .mail-actions {
+        margin-left: 0;
+    }
+}
