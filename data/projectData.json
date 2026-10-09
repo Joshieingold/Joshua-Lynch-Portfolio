@@ -39,7 +39,7 @@
             "During this project I focused on brand consistency as well as my attention to detail.",
             "I was able to improve my website design skills using react in mock-professional setting."
         ],
-        "image": "../assets/ProjectScreenshots/finnovate_clone.png"
+        "image": "./assets/ProjectScreenshots/finnovate_clone.png"
     },
     {
         "name": "neovim_config",
@@ -54,7 +54,7 @@
         "desc": "General purpose warehouse automation software.",
         "stack": ["C#", "WPF", "Firebase"],
         "url": "https://github.com/Joshieingold/Autobox-4",
-        "image": "../assets/ProjectScreenshots/autobox.png",
+        "image": "./assets/ProjectScreenshots/autobox.png",
         "snippet": {
             "lang": "C#",
             "caption": "Example of automation used for populating excel sheets",
@@ -78,7 +78,7 @@
         "name": "rojers_the_snake_method",
         "desc": "Online snake game with leaderboard and characters.",
         "stack": ["JavaScript", "HTML", "CSS", "React", "Firebase"],
-        "image": "../assets/ProjectScreenshots/snake_method.png",
+        "image": "./assets/ProjectScreenshots/snake_method.png",
         "long": [
             "Online Warehouse themed snake game.",
             "Features playable characters and an online real-time leaderboard!"
