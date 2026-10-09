@@ -32,12 +32,10 @@ export class ProjectsView {
         this.#manager = manager;
         this.#grid = grid;
 
-        // Filter bar sits directly above the grid
         this.#bar = document.createElement("div");
         this.#bar.id = "project-filters";
         grid.before(this.#bar);
 
-        // Details pop-over
         this.#dialog = document.createElement("dialog");
         this.#dialog.id = "project-dialog";
         document.body.append(this.#dialog);
@@ -89,6 +87,7 @@ export class ProjectsView {
     /////////////
     // Private //
     /////////////
+
     #bindEvents() {
         this.#bar.addEventListener("click", (e) => {
             if (e.target.closest("[data-clear]")) {
@@ -162,7 +161,7 @@ export class ProjectsView {
             .join("");
     }
 
-    // Snippets are real source files, fetched only when a pop-over opens
+    // Snippets are actually files!
     async #snippetHtml(project) {
         const s = project.snippet;
         if (!s) return "";

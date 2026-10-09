@@ -4,9 +4,9 @@ const STORAGE_KEY = "portfolio-theme";
 const KEYS = [
     "background",
     "alt-background",
-    "black", // title bars + the typing overlay
+    "black",
     "foreground",
-    "white", // text on the title bars
+    "white",
     "comment",
     "red",
     "orange",
@@ -34,7 +34,6 @@ const make = (id, label, mode, values) => {
 };
 
 export const THEMES = [
-    // Follows the OS light/dark setting using the palettes in styles.css
     {
         id: "system",
         label: "system",
@@ -205,14 +204,12 @@ export class ThemeManager {
         const theme = THEMES.find((t) => t.id === id) ?? THEMES[0];
         const root = document.documentElement;
 
-        // Wipe the previous theme, then apply the new one as inline variables
-        // (inline style beats both the :root and the prefers-color-scheme rules)
         VAR_NAMES.forEach((k) => root.style.removeProperty(`--${k}`));
         if (theme.colors) {
             Object.entries(theme.colors).forEach(([k, v]) =>
                 root.style.setProperty(`--${k}`, v),
             );
-            root.dataset.mode = theme.mode; // lets CSS swap the icon set
+            root.dataset.mode = theme.mode;
             root.style.colorScheme = theme.mode;
         } else {
             delete root.dataset.mode;

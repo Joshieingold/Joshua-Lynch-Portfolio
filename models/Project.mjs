@@ -9,7 +9,7 @@ export class Project {
     #site;
     #long;
     #image;
-    #snippet; // { lang, caption, file } or null
+    #snippet;
 
     /////////////////
     // Constructor //
@@ -29,7 +29,7 @@ export class Project {
         this.#stack = [...stack];
         this.#url = url;
         this.#site = site;
-        this.#long = [].concat(long); // string or array of paragraphs
+        this.#long = [].concat(long);
         this.#image = image;
         this.#snippet = snippet;
     }

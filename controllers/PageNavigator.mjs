@@ -8,7 +8,7 @@ export class PageNavigator {
     #onShow;
     #current = null;
     #busy = false;
-    #pending = null; // page requested while a transition was running
+    #pending = null;
 
     constructor({ commands, onShow = () => {} }) {
         this.#commands = commands;
@@ -29,7 +29,6 @@ export class PageNavigator {
     }
 
     async go(page) {
-        // Remember the latest request instead of ignoring it
         if (this.#busy) {
             this.#pending = page;
             return;
@@ -40,7 +39,7 @@ export class PageNavigator {
             this.#pending = null;
             if (next !== this.#current) {
                 await this.#openTerminal(this.#commands[next]);
-                this.#show(next); // swap while the overlay still covers the screen
+                this.#show(next);
                 await this.#closeTerminal();
             }
             next = this.#pending;

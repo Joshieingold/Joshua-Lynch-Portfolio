@@ -18,11 +18,9 @@ export class ProjectsManager {
     get activeFilters() {
         return [...this.#activeFilters];
     }
-    // AND filter: a project must use every selected tag
     get filtered() {
         return this.#projects.filter((p) => p.usesAll(this.activeFilters));
     }
-    // [[tag, count], ...] sorted by count, then name
     get tagCounts() {
         const counts = new Map();
         for (const p of this.#projects) {

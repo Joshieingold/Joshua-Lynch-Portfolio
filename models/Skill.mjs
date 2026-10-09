@@ -34,7 +34,6 @@ export class Skill {
         this.#items.push(item);
     }
 
-    // Private fields are skipped by JSON.stringify, so expose them here
     toJSON() {
         return { title: this.#title, items: this.#items };
     }

@@ -27,7 +27,6 @@ const LANGS = {
 const LANG_ALIAS = { py: "python", python: "python", lua: "lua" };
 const STRING_RE = /"(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*'|`(?:\\.|[^`\\])*`/;
 
-// lang is optional; unknown languages fall back to a C-style grammar
 export function highlight(code, lang = "") {
     const L = LANGS[LANG_ALIAS[String(lang).toLowerCase()] || "clike"];
     const re = new RegExp(

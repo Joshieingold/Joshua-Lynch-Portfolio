@@ -14,13 +14,12 @@ const hostOf = (u) => {
     }
 };
 
-// Styled like a bash command: `$ cmd arg`
 const bashLink = (href, cmd, arg) =>
     `<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener"><span class="sh-cmd">${esc(cmd)}</span> <span class="sh-arg">${esc(arg)}</span></a>`;
 
 export class EducationView {
     #manager;
-    #projects; // ProjectsManager, used to turn project names into repo links
+    #projects;
     #container;
 
     constructor(manager, projects, container) {

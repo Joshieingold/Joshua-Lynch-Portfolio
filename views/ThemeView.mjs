@@ -14,7 +14,6 @@ export class ThemeView {
             const id = chip.dataset.theme;
             this.#manager.set(id);
             this.render();
-            // render() replaced the buttons, so give keyboard focus back
             this.#container.querySelector(`[data-theme="${id}"]`)?.focus();
         });
     }

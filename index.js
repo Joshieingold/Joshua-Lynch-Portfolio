@@ -66,6 +66,7 @@ const results = await Promise.allSettled([
 ]);
 results.forEach((r) => r.status === "rejected" && console.error(r.reason));
 
+// Render //
 skillsView.render();
 projectsView.render();
 educationView.render();

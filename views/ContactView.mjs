@@ -72,6 +72,7 @@ export class ContactView {
     /////////////
     // Private //
     /////////////
+
     async #print(text, cls = "", delay = 250) {
         const line = document.createElement("div");
         if (cls) line.className = cls;

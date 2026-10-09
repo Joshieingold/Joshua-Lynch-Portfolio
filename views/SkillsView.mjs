@@ -109,7 +109,6 @@ export class SkillsView {
         this.#busy = false;
     }
 
-    // Instant: used after collapsing and when leaving the page
     reset() {
         if (this.#active || this.#placeholder) {
             const box = $(".skill-box-wrapper.active", this.#container);

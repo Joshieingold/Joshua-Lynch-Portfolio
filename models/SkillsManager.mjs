@@ -42,7 +42,6 @@ export class SkillsManager {
         this.#technique = inTechnique;
     }
 
-    // Every loaded category, in display order (this is what the view renders)
     get all() {
         return [
             this.#language,

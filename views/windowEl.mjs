@@ -1,6 +1,5 @@
 import { esc } from "../utils/dom.mjs";
 
-// The terminal-window chrome shared by skills, project cards and the pop-over
 export function windowEl(id, title, bodyHtml, withButtons, headerExtra = "") {
     return `<div class="skill-box-wrapper"${id ? ` id="${id}"` : ""}>
     <div class="mini-nav"><h3 class="terminal-name">${esc(title)}</h3>
