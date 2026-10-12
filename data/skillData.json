@@ -82,7 +82,7 @@
         "items": [
             {
                 "signature": "git commit -m",
-                "note": "[Add: your Git workflow, e.g. branching, pull requests, rebasing.]"
+                "note": "Git is a necessity in programming any large scale project. I am adept at using the cli and use it anytime I work on development."
             },
             {
                 "signature": "nvim .",
