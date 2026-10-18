@@ -36,7 +36,7 @@
             },
             {
                 "signature": "public static void Java()",
-                "note": "Learned Java EE at NBCC. I have an understanding of managing servlets, jsps and general java syntax using modern build systems such as springboot."
+                "note": "Learned Java EE at NBCC. I have an understanding of managing servlets, jsps and general java syntax using modern build systems such as Spring Boot."
             },
             {
                 "signature": "func Go()",
@@ -48,7 +48,7 @@
             },
             {
                 "signature": "$function: { MongoDB: } ",
-                "note": "I have learned  how to use mongodb at NBCC and my main database has been firebase which is similar. As such I am very familiar with NoSQL databases. "
+                "note": "I have learned  how to use MongoDB at NBCC and my main database has been firebase which is similar. As such I am very familiar with NoSQL databases. "
             }
         ]
     },
@@ -90,7 +90,7 @@
             },
             {
                 "signature": "aws configure",
-                "note": "Introduced to AWS Cloud at NBCC and completed online certificatation for it. Learned about things such as AWS Iam, AWS Elastic Beanstock, Amazon EC2, AWS Lambda, among others. ]"
+                "note": "Introduced to AWS Cloud at NBCC and completed online certificatation for it. Learned about things such as AWS IAM, AWS Elastic Beanstalk, Amazon EC2, AWS Lambda, among others."
             }
         ]
     },

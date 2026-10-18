@@ -6,7 +6,7 @@ JsonValue::Object JsonParser::handle_object() {
         whitespace();
         auto key{handle_string()};
         whitespace();
-        consume(':', "Expected colon seperator between key value pair");
+        consume(':', "Expected colon separator between key value pair");
         whitespace();
         auto value{parse()};
         whitespace();
