@@ -25,6 +25,23 @@
         "url": ""
     },
     {
+        "kind": "academic",
+        "name": "AWS Cloud Foundations",
+        "program": "",
+        "years": "Sept 2027 - October 2027",
+        "desc": "Official Certificate for completion of AWS Cloud Foundations",
+        "highlights": [],
+        "courses": [
+            "AWS Elastic Beanstalk",
+            "AWS Lambda",
+            "AWS IAM",
+            "Amazom EC2 ",
+            "Scale / Loadbalance Architecture"
+        ],
+        "projects": [],
+        "url": "https://www.credly.com/badges/a9b19b70-482a-4dc0-9839-4e1a4db5d59c/public_url"
+    },
+    {
         "kind": "self",
         "name": "Self-Directed Learning",
         "program": "Projects & Side Work",
