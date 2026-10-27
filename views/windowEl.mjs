@@ -7,8 +7,7 @@ export function windowEl(id, title, bodyHtml, withButtons, headerExtra = "") {
     ${
         withButtons
             ? `<div class="button-container">
-      <button class="button expand" aria-label="Expand ${esc(title)}">⧠</button>
-      <button class="button exit" aria-label="Close ${esc(title)}">X</button></div>`
+      <button class="button expand" aria-label="Expand ${esc(title)}">⧠</button></div>`
             : ""
     }
     </div><div class="skill-box">${bodyHtml}</div></div>`;

@@ -42,10 +42,6 @@ export class SkillsView {
                 e.stopPropagation();
                 this.#active === box ? this.collapse() : this.pick(box);
             });
-            $(".exit", box).addEventListener("click", (e) => {
-                e.stopPropagation();
-                this.collapse();
-            });
             box.addEventListener("click", () => this.pick(box));
         });
     }
